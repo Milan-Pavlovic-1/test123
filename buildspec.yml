@@ -3,14 +3,14 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/f8w2s7k7/iea2tech-frontend:latest
+      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend
   build:
     commands:
-      - docker build -t iea2tech-frontend:latest .
-      - docker tag iea2tech-frontend:latest public.ecr.aws/f8w2s7k7/iea2tech-frontend:latest
+      - docker build -t iea2tech:latest .
+      - docker tag iea2tech:latest 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend:latest
   post_build:
     commands:
-      - docker push public.ecr.aws/f8w2s7k7/iea2tech-frontend:latest
-      - printf '[{"name":"iea2tech-frontend","imageUri":"%s"}]' public.ecr.aws/f8w2s7k7/iea2tech-frontend:latest > imagedefinitions.json
+      - docker push 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend:latest
+      - printf '[{"name":"iea2tech-frontend","imageUri":"%s"}]' 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
