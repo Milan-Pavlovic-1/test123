@@ -1,7 +1,7 @@
 # Stage 1: Build react app first
 FROM node:14.21.0-slim AS build
 WORKDIR /app
-
+#sadsadsad
 ENV PATH /app/node_modules/.bin:$PATH
 RUN npm cache clean -f && npm install sudo n stable
 
