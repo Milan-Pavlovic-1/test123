@@ -6,7 +6,7 @@ phases:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 857798077713.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
-      - docker build -t iea2tech-frontend .
+      - docker build -t iea2tech-frontend:latest .
       - docker tag iea2tech-frontend:latest 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend:latest
   post_build:
     commands:
