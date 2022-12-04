@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 857798077713.dkr.ecr.us-east-1.amazonaws.com/iea2tech-frontend
   build:
     commands:
       - docker build -t iea2tech:latest .
