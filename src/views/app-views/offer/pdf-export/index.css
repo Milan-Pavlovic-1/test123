@@ -1,0 +1,39 @@
+
+  .main-table{
+    border: 1px solid black;
+  }
+  .main-table tr{
+    background-color: rgba(158, 158, 158, 0.208);
+     border: none;
+  }
+  .second-table tr{
+    background-color: white;
+    border: none;
+  }
+  .second-table{
+    margin-bottom: 1rem ;
+    border: none;
+  }
+
+  .main-table  td {
+    border: none
+  }
+  
+  .second-table  td {
+   border: none
+  }
+
+
+  .rowClassName1 {
+border: none;
+  }
+  
+  .rowClassName1 td:first-child {
+border: none;
+  }
+  
+  .rowClassName1 td:last-child {
+border: none;
+  }
+
+  .containers{padding: 0rem;  width: 100vw; height: 100vh; }
