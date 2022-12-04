@@ -4,7 +4,7 @@ WORKDIR /app
 #sadsadsad
 ENV PATH /app/node_modules/.bin:$PATH
 RUN npm cache clean -f && npm install sudo n stable
-
+####
 COPY package*.json ./
 RUN npm install
 
